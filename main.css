@@ -4,13 +4,13 @@
   grid-template-rows: 10rem 1fr 5%;
   grid-template-areas:
     "header header header"
-    ". content ."
+    "arrowLeft content arrowRight"
     "footer footer footer";
   min-height: 100vh;
 }
 
 body {
-  background-color: #bb2528;
+  background-color: #165b33;
 }
 
 .header {
@@ -27,13 +27,189 @@ h1 {
 
 .content {
   grid-area: content;
-  width: 80vw;
-  height: 80vh;
+  width: 1200px;
+  height: 553px;
   position: relative;
-  justify-content: center;
-  align-items: center;
+  margin-left: calc((100% - 1200px) / 2);
+  overflow: hidden;
 }
 
-img {
-  width: 80vw;
+#arrowLeft {
+  width: 100px;
+  rotate: 180deg;
+  margin-top: calc((500px - 71px) / 2);
+  margin-left: calc((10vw - 100px) / 2);
+  cursor: pointer;
+}
+
+#arrowRight {
+  width: 100px;
+  margin-top: calc((500px - 71px) / 2);
+  margin-left: calc((10vw - 100px) / 2);
+  cursor: pointer;
+}
+
+#canvas {
+  width: 100%;
+}
+
+.inventory {
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+}
+
+.inventory img {
+  width: 80px;
+  object-fit: contain;
+}
+
+#ladder {
+  position: absolute;
+  width: 80px;
+  margin-left: 800px;
+  margin-top: 400px;
+  cursor: pointer;
+}
+
+#sack {
+  position: absolute;
+  width: 80px;
+  margin-left: 220px;
+  margin-top: 325px;
+  cursor: pointer;
+}
+
+#coal {
+  position: absolute;
+  width: 80px;
+  margin-left: 400px;
+  margin-top: 250px;
+  cursor: pointer;
+}
+
+#gift {
+  position: absolute;
+  width: 80px;
+  margin-left: 10px;
+  margin-top: 450px;
+  cursor: pointer;
+}
+
+#bow {
+  position: absolute;
+  width: 80px;
+  margin-left: 1000px;
+  margin-top: 300px;
+  cursor: pointer;
+}
+
+#guide {
+  font-size: 30px;
+  position: absolute;
+  color: #f8b229;
+  margin-left: 400px;
+  margin-top: 490px;
+  background-color: #165b33;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#placedGift {
+  position: absolute;
+  width: 80px;
+  margin-top: 400px;
+  margin-left: 240px;
+}
+
+#placedCoal {
+  position: absolute;
+  width: 80px;
+  margin-top: 400px;
+  margin-left: 240px;
+}
+
+#placePresent {
+  position: absolute;
+  width: 150px;
+  margin-top: 250px;
+  margin-left: 200px;
+  cursor: pointer;
+}
+
+#randomScreen {
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-areas:
+    ". randomHeader ."
+    ". randomImages ."
+    ". randomButton .";
+  position: absolute;
+  width: 1200px;
+  height: 553px;
+  overflow: hidden;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#randomHeader {
+  grid-area: randomHeader;
+  color: #ea4630;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 60px;
+  text-align: center;
+}
+
+.randomImages {
+  grid-area: randomImages;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.randomImages img {
+  width: 200px;
+  justify-self: center;
+}
+
+#randomButton {
+  grid-area: randomButton;
+  background-color: #f8b229;
+  border-style: none;
+  color: #165b33;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 28px;
+  text-align: center;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#randomButton:hover {
+  background-color: #ce9729;
+  cursor: pointer;
+}
+
+#placedPresent {
+  font-size: 30px;
+  position: absolute;
+  color: #f8b229;
+  margin-left: 170px;
+  margin-top: 480px;
+  background-color: #165b33;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#finished {
+  font-size: 52px;
+  position: absolute;
+  color: #ea4630;
+  margin-left: 250px;
+  margin-top: 350px;
+  background-color: #165b33;
+  border-radius: 10px;
+  padding: 30px;
 }
