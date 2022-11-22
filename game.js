@@ -33,12 +33,6 @@ const errorMessage = document.getElementById("guide");
 const placedPresent = document.getElementById("placedPresent");
 const finished = document.getElementById("finished");
 
-const header = document.getElementById("header");
-
-header.addEventListener("click", function () {
-  sessionStorage.clear();
-});
-
 const LADDER_KEY = "ladder";
 const SACK_KEY = "sack";
 const COAL_KEY = "coal";
